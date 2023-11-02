@@ -114,9 +114,9 @@ def fart_control():   #Vi definere vores while løkker, så de kan bruges til th
             print(f"Speed           : km/t {gps.get_speed()}")
             print(f"Course          : {gps.get_course():.1f}")
  
-        if gps.get_speed() > 3:         # Hvis farten er over 30 km/t
+        if gps.get_speed() > 30:         # Hvis farten er over 30 km/t
             speed_int(12, 0, 10, 0)      # vil neopixel lyse grøn
-        if gps.get_speed() > 0 and gps.get_speed() < 3: #hvis den er mellem 0- og 30 km/t
+        if gps.get_speed() > 0 and gps.get_speed() < 30: #hvis den er mellem 0- og 30 km/t
             speed_int(12, 10, 0, 0)                      # vil neopixel lyse rød
         sleep(5)    # Så holder neopixel farven i 10 sekunder
         speed_int(12, 0, 0, 0) # og slukker efterfølgende
